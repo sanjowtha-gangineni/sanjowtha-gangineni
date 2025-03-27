@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        function login() {
+            var userId = document.getElementById("userid").value;
+            var password = document.getElementById("password").value;
+
+            // Hardcoded login credentials
+            if (userId === "admin" && password === "1234") {
+                localStorage.setItem("loggedIn", "true");
+                window.location.href = "city.html?name=login"; // Redirect to city selection
+            } else {
+                alert("Invalid User ID or Password!");
+            }
+        }
+    </script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin-top: 100px;
+        }
+        .login-container {
+            border: 2px solid #397a39;
+            padding: 20px;
+            width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            margin: auto;
+        }
+        input, button {
+            display: block;
+            width: 90%;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        button {
+            background-color: #397a39;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2e5e2e;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <input type="text" id="userid" placeholder="User ID">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+</body>
+</html>
