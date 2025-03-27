@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select City</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (localStorage.getItem("loggedIn") !== "true") {
+                window.location.href = "login.html"; 
+            }
+        });
+
+        function saveCity() {
+            var selectedCity = document.getElementById("city").value;
+            if (!selectedCity) {
+                alert("Please select a city before proceeding.");
+                return;
+            }
+            localStorage.setItem("selectedCity", selectedCity);
+            window.location.href = "farmer.html"; // Redirect to farmer selection
+        }
+    </script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Your City</h1>
+    <select id="city">
+        <option value="" disabled selected>Select a city</option>
+        <option value="Anakapalle">Anakapalle</option>
+        <option value="Anantapur">Anantapur</option>
+        <option value="Bapatla">Bapatla</option>
+        <option value="Chittoor">Chittoor</option>
+        <option value="Eluru">Eluru</option>
+        <option value="Guntur">Guntur</option>
+        <option value="Kadapa">Kadapa</option>
+        <option value="Kakinada">Kakinada</option>
+        <option value="Konaseema">Konaseema</option>
+        <option value="Krishna">Krishna</option>
+        <option value="Kurnool">Kurnool</option>
+        <option value="Manyam">Manyam</option>
+        <option value="Nandyal">Nandyal</option>
+        <option value="Nellore">Nellore</option>
+        <option value="Palnadu">Palnadu</option>
+        <option value="Parvathipuram">Parvathipuram</option>
+        <option value="Prakasam">Prakasam</option>
+        <option value="Rajamahendravaram">Rajamahendravaram</option>
+        <option value="Srikakulam">Srikakulam</option>
+        <option value="Tirupati">Tirupati</option>
+        <option value="Visakhapatnam">Visakhapatnam</option>
+        <option value="Vijayawada">Vijayawada</option>
+        <option value="West Godavari">West Godavari</option>
+        <option value="YSR Kadapa">YSR Kadapa</option>
+    </select>
+    <br>
+    <button onclick="saveCity()">Next</button>
+</body>
+</html>
