@@ -1,0 +1,4 @@
+--->first copy the codes into vscode
+--->the entry page is entry.html
+--->click on golive in vscode
+--->the application gets started
