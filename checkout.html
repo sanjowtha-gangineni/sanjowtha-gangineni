@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout & Payment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+    }
+    .checkout {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      display: inline-block;
+      text-align: center;
+      max-width: 400px;
+    }
+    .input-field {
+      padding: 10px;
+      margin: 5px 0;
+      width: 80%;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #39a747;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px 5px;
+    }
+    button:hover {
+      background-color: rgb(80, 176, 80);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Checkout & Payment</h2>
+    <div class="checkout">
+      <!-- Static display; ideally, product details are passed via URL or session -->
+      <p><strong>Item:</strong> Apple (Example)</p>
+      <p><strong>Price:</strong> ₹120</p>
+      <p><strong>Select Payment Method:</strong></p>
+      <p>
+        <a href="payment.html?method=upi&product=Apple&price=120"><button>UPI</button></a>
+        <a href="payment.html?method=card&product=Apple&price=120"><button>Credit Card</button></a>
+        <a href="payment.html?method=cod&product=Apple&price=120"><button>Cash on Delivery</button></a>
+      </p>
+      <a href="home.html"><button>Back to Home</button></a>
+    </div>
+  </div>
+</body>
+</html>
